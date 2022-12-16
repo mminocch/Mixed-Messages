@@ -1,7 +1,8 @@
 
 //identify the button variable below
-let button = document.getElementById('rollButton');
+const button = document.getElementById('rollButton');
 let responseBoxOne = document.getElementById('responseBoxOne');
+let responseBoxTwo = document.getElementById('responseBoxTwo');
 
 // const rolls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
@@ -18,16 +19,12 @@ const badRolls = ["Yikes", "Uh oh", "That's too bad", "Nice... try.", "That does
 function roll(){
     return Math.floor(Math.random()*20)+1
 };
-//Run function to generate the random #
-roll();
+
 
 //Phrase selector... each array has 5 possible responses.
 function phraseSelector(){
     return Math.floor(Math.random()*5);
 }
-
-//Run function to generate the random # to use to select the array phrase
-phraseSelector();
 
 //Just defining a couple of variables
 let phraseSelection = phraseSelector();
@@ -48,26 +45,14 @@ function selectPhrase(){
         return criticalSuccess;
     }
 };
-
-
-//console.logs to display the roll value and the phrase that should accompany it
-
-/*
-console.log(myRoll);
-console.log(selectPhrase())
-*/
+let finalPhrase = selectPhrase();
 
 
 function finalRoll(){
-    responseBoxOne.innerHTML = 'test';  
+    document.getElementById('responseBoxOne').innerHTML = myRoll;
+    responseBoxTwo.innerHTML = finalPhrase;
 };
+
 //final phrase to output
 
-
-
-
-
-//make the button "click"
-//button.addEventListener('click',finalRoll);
-
-button.onclick(finalRoll);
+button.addEventListener('click',finalRoll);
