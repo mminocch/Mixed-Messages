@@ -54,7 +54,7 @@ p.responseBoxOne {
     font-family:fantasy;
     font-size:x-large;
     font-weight:bolder;
-    text-align: center;
+    text-align: left;
     color:black;
     font-size:xx-large;
     transform: translate(-50%,-50%);
@@ -68,7 +68,7 @@ p.responseBoxTwo {
     font-family:fantasy;
     font-size:x-large;
     font-weight:bolder;
-    text-align: center;
+    text-align: left;
     color:black;
     font-size:xx-large;
     transform: translate(-50%,-50%);
@@ -77,3 +77,4 @@ p.responseBoxTwo {
 img {
     opacity: 0.5;
 }
+
